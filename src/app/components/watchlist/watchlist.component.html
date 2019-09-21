@@ -1,0 +1,21 @@
+
+<div align="center">
+    <table class="mdl-data-table">
+        <thead>
+            <tr>
+                <th class="mdl-data-column" align="left">Stock</th>
+                <th class="mdl-data-column" align="right">Price</th>
+                <th class="mdl-data-column" align="right">Open</th>
+                <th class="mdl-data-column" align="right">High</th>
+                <th class="mdl-data-column" align="right">Low</th>
+                <th class="mdl-data-column" align="right">Volumn</th>
+                <th class="mdl-data-column" align="right">Change</th>
+                <th class="mdl-data-column" align="right"></th>
+            </tr>
+        </thead>
+    </table>
+
+<!-- Refer to component app-quote-item, query quotes locally, 
+     pass one quote to app-quote-item where it should use @input -->
+<app-quote-item *ngFor="let quote of quoteList" [quote]="quote"></app-quote-item>
+</div>

@@ -1,0 +1,16 @@
+<div  align="center">
+    <table class="mdl-data-table">
+      <tbody>
+        <tr>
+          <td class="mdl-data-column" align="left"> {{quote.symbol}}</td>
+          <td class="mdl-data-column" align="right">{{quote.price}} </td>
+          <td class="mdl-data-column" align="right">{{quote.open}}  </td>
+          <td class="mdl-data-column" align="right">{{quote.high}}  </td>
+          <td class="mdl-data-column" align="right">{{quote.low}}   </td>
+          <td class="mdl-data-column" align="right">{{quote.volumn}}</td>
+          <td class="mdl-data-column" align="right">{{quote.change}}%</td>
+          <td class="mdl-data-column" align="right"><button (click)="onDelete(todo)" class="del">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

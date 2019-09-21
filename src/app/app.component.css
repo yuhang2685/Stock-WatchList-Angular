@@ -1,0 +1,45 @@
+  .mdl-layout__header {
+    position: fixed;
+  }
+  
+  .mdl-layout__content {
+    margin-top: 68px;
+  }
+  
+  .nav-link {
+    padding: 0 1em;
+    width: 100px;
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .mdl-navigation .router-link-active {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .nav-link.router-link-active::after {
+    height: 3px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    position: inherit;
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .mdl-layout__header-row {
+    height: 56px;
+    padding: 0 16px 0 72px;
+    padding-left: 8px;
+  }
+  
+  .add-button {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    z-index: 999;
+    color: rgba(255, 255, 255, .6);
+  }
+  
