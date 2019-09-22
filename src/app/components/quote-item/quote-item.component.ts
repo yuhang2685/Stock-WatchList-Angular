@@ -8,6 +8,8 @@ import { Quote } from 'src/app/models/Quote';
 })
 export class QuoteItemComponent implements OnInit {
 
+  // Accept data from watchlist.component.html 
+  // where <app-quote-item ... [quote]="quote"> is used.
   @Input() quote: Quote;
 
   constructor() { }
@@ -15,4 +17,7 @@ export class QuoteItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  onDelete(quote){
+    console.log("delete");
+  }
 }
