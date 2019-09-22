@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WatchlistComponent } from './components/watchlist/watchlist.component';
 import { QuoteItemComponent } from './components/quote-item/quote-item.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { AboutComponent } from './components/pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WatchlistComponent,
-    QuoteItemComponent
+    QuoteItemComponent,
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
