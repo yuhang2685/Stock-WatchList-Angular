@@ -17,7 +17,8 @@ export class WatchlistComponent implements OnInit {
   constructor(private quotesService:QuotesService) { }
 
   ngOnInit() {
-    this.quoteList = this.quotesService.getQuotes();
+    this.quotesService.getQuotes().subscribe(quoteList => 
+      this.quoteList = quoteList);
   }
 
 }
