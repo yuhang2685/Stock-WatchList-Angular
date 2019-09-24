@@ -12,14 +12,17 @@ export class QuoteItemComponent implements OnInit {
   // where <app-quote-item ... [quote]="quote"> is used.
   @Input() quote: Quote;
   // Output data to watchlist.component.html by EventEmitter :
-  @Output() deleteQuote: EventEmitter<Quote> = new EventEmitter();
+  @Output() deleteQuoteItem: EventEmitter<Quote> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  // Process the event of "del-button click".
+  // It will "emit upward" to parent component |watchlist.component.html| 
+  // using Output deleteQuoteItem which is an EventEmitter. 
   onDelete(quote){
-    this.deleteQuote.emit(quote);
+    this.deleteQuoteItem.emit(quote);
   }
 }

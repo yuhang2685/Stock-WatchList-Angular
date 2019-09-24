@@ -15,10 +15,15 @@
         </thead>
     </table>
 
-<!-- Refer to component app-quote-item, query quotes locally, 
-     pass one quote to app-quote-item where it should use @input -->
+<!-- |*ngFor="let quote of quoteList"| queries quotes locally in |watchlist.component.ts|.
+     It passes each quote 1by1 by |[quote]="quote"| to |quote| in |quote-item.components.ts| 
+     where it should use |@input| to accept |quote|.
+     Then in |quote-item.component.html| it can use quote. -->
+<!-- |(deleteQuoteItem)| is output from sub component |app-quote-item|.
+     It is caught by |deleteQuote($event)|
+     and handled by function |deleteQuote| in ts file.-->
 <app-quote-item *ngFor="let quote of quoteList" 
                 [quote]="quote"
-                (deleteQuote)="deleteQuote($event)">
+                (deleteQuoteItem)="deleteQuote($event)">
 </app-quote-item>
 </div>

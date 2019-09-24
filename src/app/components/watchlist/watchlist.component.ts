@@ -16,13 +16,15 @@ export class WatchlistComponent implements OnInit {
   // After dependency injection, this.quotesService can be used.
   constructor(private quotesService:QuotesService) { }
 
+  // Through HttpService "quotesService", asynchronously by |subscribe|,
+  // it obtains quote list from external web service.
   ngOnInit() {
     this.quotesService.getQuotes().subscribe(quoteList => 
       this.quoteList = quoteList);
   }
 
   deleteQuote(quote:Quote){
-    // Delete the stock quote from UI
+    // Delete the stock quote from UI.
     this.quoteList = this.quoteList.filter(t => t.id !== quote.id);
     // Delete the stock symbol from the user watchlist 
     // which is stored in the external webservice.
