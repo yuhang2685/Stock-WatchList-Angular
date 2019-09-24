@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
 import { Quote } from '../models/Quote';
 
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type':'application/json'})
+}
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +14,17 @@ import { Quote } from '../models/Quote';
 
 export class QuotesService {
 
-  quotesUrl: string = "http://127.0.0.1:8301/rest/stock/";
-  userName: string = "JINFANG";
+  url: string = "http://127.0.0.1:8301/rest/stock/";
+  userName: string = "YUHANG";
 
   constructor(private http:HttpClient) { }
 
   getQuotes(): Observable<Quote[]> {
-    return this.http.get<Quote[]>(`${this.quotesUrl}${this.userName}`);
+      return this.http.get<Quote[]>(`${this.url}${this.userName}`);
+  }
+
+  deleteSymbol(quote: Quote):Observable<any> {    
+    let deleteUrl: string = this.url + this.userName + "/" + quote.symbol;
+    return this.http.delete<void>(deleteUrl, httpOptions);
   }
 }

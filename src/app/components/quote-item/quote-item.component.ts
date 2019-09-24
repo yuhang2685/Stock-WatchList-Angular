@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Quote } from 'src/app/models/Quote';
 
 @Component({
@@ -11,6 +11,8 @@ export class QuoteItemComponent implements OnInit {
   // Accept data from watchlist.component.html 
   // where <app-quote-item ... [quote]="quote"> is used.
   @Input() quote: Quote;
+  // Output data to watchlist.component.html by EventEmitter :
+  @Output() deleteQuote: EventEmitter<Quote> = new EventEmitter();
 
   constructor() { }
 
@@ -18,6 +20,6 @@ export class QuoteItemComponent implements OnInit {
   }
 
   onDelete(quote){
-    console.log("delete");
+    this.deleteQuote.emit(quote);
   }
 }

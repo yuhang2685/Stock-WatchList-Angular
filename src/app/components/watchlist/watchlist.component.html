@@ -17,5 +17,8 @@
 
 <!-- Refer to component app-quote-item, query quotes locally, 
      pass one quote to app-quote-item where it should use @input -->
-<app-quote-item *ngFor="let quote of quoteList" [quote]="quote"></app-quote-item>
+<app-quote-item *ngFor="let quote of quoteList" 
+                [quote]="quote"
+                (deleteQuote)="deleteQuote($event)">
+</app-quote-item>
 </div>
