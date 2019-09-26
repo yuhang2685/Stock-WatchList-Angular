@@ -35,6 +35,7 @@ export class QuotesService {
     let addSymbolUrl: string = this.url + "add";
     
     let userSymbol: UserSymbol = new UserSymbol();
+    userSymbol.id = 1;
     userSymbol.userName = this.userName;
     userSymbol.quote = symbol;
 

@@ -1,6 +1,6 @@
 export class Quote {
 
-    id:     number;
+    //id:     number;
     symbol: string;
     price:  number;
     open:   number;

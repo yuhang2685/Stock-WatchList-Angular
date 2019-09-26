@@ -25,7 +25,8 @@ export class WatchlistComponent implements OnInit {
 
   deleteQuote(quote:Quote){
     // Delete the stock quote from UI.
-    this.quoteList = this.quoteList.filter(t => t.id !== quote.id);
+    //this.quoteList = this.quoteList.filter(t => t.id !== quote.id);
+    this.quoteList = this.quoteList.filter(t => t.symbol !== quote.symbol);
     // Delete the stock symbol from the user watchlist 
     // which is stored in the external webservice.
     this.quotesService.deleteSymbol(quote).subscribe();
