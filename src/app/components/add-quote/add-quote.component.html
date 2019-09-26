@@ -1,0 +1,6 @@
+<!--onSubmit() is the function handling the event for "submit button clicked"-->
+<form class="form" (ngSubmit)="onSubmit()">
+    <!-- [()] is two-way data binding, e.g., input and output -->
+    <input type="text" name="symbol" [(ngModel)]="symbol" placeholder="Add Symbol...">
+    <input type="submit" value="Submit" class="btn">
+</form>

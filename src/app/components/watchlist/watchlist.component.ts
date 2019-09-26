@@ -31,4 +31,10 @@ export class WatchlistComponent implements OnInit {
     this.quotesService.deleteSymbol(quote).subscribe();
   }
 
+  addSymbol(symbol:string) {
+    this.quotesService.addSymbol(symbol).subscribe(
+      //quote => {this.quoteList.push(quote);});
+    );
+  }
+
 }

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 // HttpHeaders is for contents of type JSON
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
 import { Quote } from '../models/Quote';
+import { UserSymbol } from '../models/UserSymbol';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -11,6 +12,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 
 export class QuotesService {
 
@@ -24,7 +26,19 @@ export class QuotesService {
   }
 
   deleteSymbol(quote: Quote):Observable<any> {    
-    let deleteUrl: string = this.url + this.userName + "/" + quote.symbol;
-    return this.http.delete<void>(deleteUrl, httpOptions);
+    let deleteSymbolUrl: string = this.url + this.userName + "/" + quote.symbol;
+    return this.http.delete<void>(deleteSymbolUrl, httpOptions);
   }
+
+
+  addSymbol(symbol:string):Observable<any>{
+    let addSymbolUrl: string = this.url + "add";
+    
+    let userSymbol: UserSymbol = new UserSymbol();
+    userSymbol.userName = this.userName;
+    userSymbol.quote = symbol;
+
+    return this.http.post<void>(addSymbolUrl, userSymbol, httpOptions);
+  }
+  
 }
