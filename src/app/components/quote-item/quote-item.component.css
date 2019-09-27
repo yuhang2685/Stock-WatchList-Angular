@@ -19,7 +19,9 @@
   }
 
   .mdl-data-table {
-    width: 60%;
+    width: 75%;  
+    height: 50px;
+    border-bottom: 1px solid #ddd;
   }
   
   .mdl-data-column {
