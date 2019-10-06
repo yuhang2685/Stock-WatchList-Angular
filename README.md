@@ -2,7 +2,7 @@
 Author: Dr. YUHANG ZHAO
 
 ## Screenshot
-![screenshot](https://github.com/yuhang2685/Stock-WatchList-Angular/blob/master/frontpage.png)
+![screenshot](https://github.com/yuhang2685/Stock-WatchList-Angular/blob/master/frongpage.png)
 
 ## Overview
 This web application queries the finance web service [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices) to retrieve real-time stock quotes for selected stocks and display.
