@@ -10,6 +10,7 @@ import { QuoteItemComponent } from './components/quote-item/quote-item.component
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
+import { DateComponent } from './components/date/date.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddQuoteComponent } from './components/add-quote/add-quote.component';
     QuoteItemComponent,
     HeaderComponent,
     AboutComponent,
-    AddQuoteComponent
+    AddQuoteComponent,
+    DateComponent
   ],
   imports: [
     BrowserModule,
