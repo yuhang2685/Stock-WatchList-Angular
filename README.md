@@ -12,8 +12,8 @@ This web app front-end queries the finance web service [Stock-Price-Viewer-Micro
 
 ### Features
 - Powered by Angular8 and RxJs
-- Real-time stock price
-- Add / delete stock symbols
+- Real-time Quotes
+- User watchlist management
 
 ### TODOs
 - Market indexes
@@ -21,8 +21,8 @@ This web app front-end queries the finance web service [Stock-Price-Viewer-Micro
 - Stock chart
 - Technical analysis
 - List of incoming market events
-- Options of AI strategies for user to follow
-- Notify user for BUY/SELL for the followed AI strategies
+- Supply historical data trained learning algorithm using common technical analysis
+- Suggestions for users BUY/SELL for the followed AI algorithm
 
 ### Related Projects
 [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices)
