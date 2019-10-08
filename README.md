@@ -1,25 +1,36 @@
-# StockWatchListAngular
-Author: Dr. YUHANG ZHAO
+## StockWatchListAngular
+Author: Dr. YUHANG ZHAO 
 
-## Screenshot
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+### Screenshot
 ![screenshot](https://github.com/yuhang2685/Stock-WatchList-Angular/blob/master/frongpage.png)
 
-## Overview
-This web application queries the finance web service [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices) to retrieve real-time stock quotes for selected stocks and display.
+### Overview
+This web app front-end queries the finance web service [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices) to retrieve and display real-time market data including Stock, FX, CryptoCurrency and more.
 
-## Features
-- Add / delete stock symbols.
-- Login with support for two factor auth (unfinished).
-- Stock chart (unfinished).
-- Individual Stock view (unfinished).
-- Powered by Angular and RxJs.
+### Features
+- Powered by Angular8 and RxJs
+- Real-time stock price
+- Add / delete stock symbols
 
-## Related Projects
+### TODOs
+- Market indexes
+- Login with support for two factor auth
+- Stock chart
+- Technical analysis
+- List of incoming market events
+- Options of AI strategies for user to follow
+- Notify user for BUY/SELL for the followed AI strategies
+
+### Related Projects
 [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices)
+The finance web service supplying real-time market data including Stock, FX, CryptoCurrency and more.
 
-## Environment
-Angular CLI: 8.0.2
+### Environment
+- Angular CLI: 8.0.2
+- Node.js: v10.16.0
 
-Node.js: v10.16.0
-
-OS: win32 x64
+### License
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
