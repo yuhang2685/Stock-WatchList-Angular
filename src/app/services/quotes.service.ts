@@ -16,28 +16,27 @@ const httpOptions = {
 
 export class QuotesService {
 
-  url: string = "http://127.0.0.1:8301/rest/stock/";
+  baseUrl: string = "http://127.0.0.1:8301/rest/stock/";
   userName: string = "YUHANG";
 
   constructor(private http:HttpClient) { }
 
   getQuotes(): Observable<Quote[]> {
-      return this.http.get<Quote[]>(`${this.url}${this.userName}`);
+      return this.http.get<Quote[]>(`${this.baseUrl}${this.userName}`);
   }
 
+  
   deleteSymbol(quote: Quote):Observable<any> {    
-    let deleteSymbolUrl: string = this.url + this.userName + "/" + quote.symbol;
+
+    let deleteSymbolUrl: string = this.baseUrl + this.userName + "/" + quote.symbol;
     return this.http.delete<void>(deleteSymbolUrl, httpOptions);
   }
 
 
   addSymbol(symbol:string):Observable<any>{
-    let addSymbolUrl: string = this.url + "add";
-    
-    let userSymbol: UserSymbol = new UserSymbol();
-    userSymbol.id = 1;
-    userSymbol.userName = this.userName;
-    userSymbol.quote = symbol;
+
+    let addSymbolUrl: string = this.baseUrl + "add";    
+    let userSymbol: UserSymbol = new UserSymbol(this.userName, symbol);    
 
     return this.http.post<void>(addSymbolUrl, userSymbol, httpOptions);
   }

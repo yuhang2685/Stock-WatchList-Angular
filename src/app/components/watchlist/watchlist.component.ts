@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuotesService } from '../../services/quotes.service';
 import { Quote } from '../../models/Quote';
-
+import { timer } from 'rxjs';
 @Component({
   selector: 'app-watchlist',
   templateUrl: './watchlist.component.html',
@@ -12,15 +12,25 @@ export class WatchlistComponent implements OnInit {
 
   // This field holds the data returned from external webservices.
   quoteList: Quote[];
-
+ 
   // After dependency injection, this.quotesService can be used.
   constructor(private quotesService:QuotesService) { }
 
   // Through HttpService "quotesService", asynchronously by |subscribe|,
   // it obtains quote list from external web service.
+  // ISSUE:
+  // We might get null stockQuote in the quote list due to the limitation of the market data provider.
+  // Instead of breaking down the app (by the display function accessing a null object), 
+  // or displaying blank (if we filter away any null stockQuotes),
+  // we try to access the null stockQuote in the filter method 
+  // and which (I believe) will throw an exception (see console output) and keep the display unchanged 
+  // until next quotelist containing non-null quotes arrives and displayed.
+  // The elegant way is to EXPLICITLY throw exception for this error but not through the filter method.
   ngOnInit() {
-    this.quotesService.getQuotes().subscribe(quoteList => 
-      this.quoteList = quoteList);
+
+    const source = timer(0, 15000);
+    source.subscribe(_ => this.quotesService.getQuotes().subscribe(quoteList => 
+      this.quoteList = quoteList.filter(t => t.symbol !== null)));
   }
 
   deleteQuote(quote:Quote){
