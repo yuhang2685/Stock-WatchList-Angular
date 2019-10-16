@@ -1,4 +1,4 @@
-## StockWatchListAngular
+## Stock-WatchList-Angular
 Author: Dr. YUHANG ZHAO 
 
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
@@ -8,7 +8,7 @@ Author: Dr. YUHANG ZHAO
 ![screenshot](https://github.com/yuhang2685/Stock-WatchList-Angular/blob/master/frongpage.png)
 
 ### Overview
-This web app front-end queries the finance web service [Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices) to retrieve and display real-time market data including Stock, FX, CryptoCurrency and more.
+This web app front-end queries the finance web service [My-Finance-Channel-Service](https://github.com/yuhang2685/My-Finance-Channel-Service) to display user data and real-time market data including Stock, FX, CryptoCurrency and more.
 
 ### Features
 - Powered by Angular8 and RxJs
@@ -25,8 +25,8 @@ This web app front-end queries the finance web service [Stock-Price-Viewer-Micro
 - Suggestions for users BUY/SELL for the followed AI algorithm
 
 ### Related Projects
-[Stock-Price-Viewer-Microservices](https://github.com/yuhang2685/Stock-Price-Viewer-Microservices)
-The finance web service supplying real-time market data including Stock, FX, CryptoCurrency and more.
+[My-Finance-Channel-Service](https://github.com/yuhang2685/My-Finance-Channel-Service)
+The finance web service maintaining user data and real-time market data including Stock, FX, CryptoCurrency and more.
 
 ### Environment
 - Angular CLI: 8.0.2
