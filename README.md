@@ -8,7 +8,7 @@ Author: Dr. YUHANG ZHAO
 ![screenshot](https://github.com/yuhang2685/Stock-WatchList-Angular/blob/master/frongpage.png)
 
 ### Overview
-This web app front-end queries the finance web service [My-Finance-Channel-Service](https://github.com/yuhang2685/My-Finance-Channel-Service) to display user data and real-time market data including Stock, FX, CryptoCurrency and more.
+This web app front-end queries the finance web service [My-Finance-Channel-MicroServices](https://github.com/yuhang2685/My-Finance-Channel-MicroServices) to display user data and real-time market data including Stock, FX, CryptoCurrency and more.
 
 ### Features
 - Powered by Angular8 and RxJs
@@ -25,7 +25,7 @@ This web app front-end queries the finance web service [My-Finance-Channel-Servi
 - Suggestions for users BUY/SELL for the followed AI algorithm
 
 ### Related Projects
-[My-Finance-Channel-Service](https://github.com/yuhang2685/My-Finance-Channel-Service)
+[My-Finance-Channel-MicroServices](https://github.com/yuhang2685/My-Finance-Channel-MicroServices)
 The finance web service maintaining user data and real-time market data including Stock, FX, CryptoCurrency and more.
 
 ### Environment
